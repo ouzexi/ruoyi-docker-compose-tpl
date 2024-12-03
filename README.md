@@ -20,7 +20,24 @@
 
 4、把你前端项目的打包产物目录（一般为dist）替换`nginx/html`的dist目录。
 
-5、以上步骤完成后，把整个目录上传到你的服务器，执行`./deploy.sh`即可一键部署。
+5、完成以上步骤后，把整个目录上传到你的服务器，按需执行`./deploy.sh [port|base|modules|stop|rm]`即可完成一键部署或停止服务。
+
+```shell
+// 开启所需端口
+./deploy.sh port
+
+// 启动基础环境（必须）
+./deploy.sh base
+
+// 启动程序模块（必须）
+./deploy.sh modules
+
+// 关闭所有环境/模块
+./deploy.sh stop
+
+// 删除所有环境/模块
+./deploy.sh rm
+```
 
 ### 注意事项
 
